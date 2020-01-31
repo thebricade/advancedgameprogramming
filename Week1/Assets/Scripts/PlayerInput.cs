@@ -25,10 +25,10 @@ public class PlayerInput : MonoBehaviour
 
     public void movePlayer()
     {
-        if(Input.GetKey(playerUp)) {Debug.Log("player moved up");}
-        if(Input.GetKey(playerDown)){}
-        if(Input.GetKey(playerLeft)){}
-        if(Input.GetKey(playerRight)){}
+        if (Input.GetKey(playerUp)) { rb2d.AddForce(Vector2.up);}
+        if(Input.GetKey(playerDown)){ rb2d.AddForce(Vector2.down);}
+        if(Input.GetKey(playerLeft)){ rb2d.AddForce(Vector2.left);}
+        if(Input.GetKey(playerRight)){rb2d.AddForce(Vector2.right);}
         
     }
 }
