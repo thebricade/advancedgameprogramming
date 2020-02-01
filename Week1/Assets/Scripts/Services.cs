@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Services : MonoBehaviour
+public class Services 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //references for specific game scripts 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static AITeamMovement _AiTeam1, _AiTeam2; 
+    public static GameObject[] _player1Team, _player2Team;
+    public static Game _game; 
+
 }
