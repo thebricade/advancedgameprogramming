@@ -17,10 +17,13 @@ public class Game : MonoBehaviour
         
         //everything for player1 
         Services._player1Team = GameObject.FindGameObjectsWithTag("player1");
-        //Services._AiTeam1 = player1
+        Debug.Log(Services._player1Team.Length); 
+        
         
         //everything for player2
-        Services._player2Team = GameObject.FindGameObjectsWithTag("player2");
+        //Services._player2Team = GameObject.FindGameObjectsWithTag("player2");
         
     }
+    
+    
 }
