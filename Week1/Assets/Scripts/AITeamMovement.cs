@@ -48,7 +48,8 @@ public class AITeamMovement : MonoBehaviour
        for (int i = 0; i < Services._player1Team.Length; i++)
        {
            var currentposition = new Vector2(Services._player1Team[i].GetComponent<Transform>().position.x, Services._player1Team[i].GetComponent<Transform>().position.y);
-           Services._player1Team[i].GetComponent<Transform>().position = Vector2.MoveTowards(currentposition, ballLocation, step)
+           Services._player1Team[i].GetComponent<Transform>().position =
+               Vector2.MoveTowards(currentposition, ballLocation, step); 
        }
         GetComponentInChildren<Transform>().position= Vector2.MoveTowards(teamPosition, ballLocation, step); 
     }
