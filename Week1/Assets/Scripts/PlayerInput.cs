@@ -6,7 +6,8 @@ using Debug = UnityEngine.Debug;
 
 public class PlayerInput : MonoBehaviour
 {
-    public KeyCode playerUp, playerDown, playerRight, playerLeft;
+    public KeyCode playerUp, playerDown, playerRight, playerLeft, cheerKey;
+    public string team; 
 
     private Rigidbody2D rb2d; 
     
@@ -20,6 +21,7 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         movePlayer();
+        CheerTeam(team); //expensive warning
     }
 
     public void movePlayer()
@@ -29,5 +31,27 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetKey(playerLeft)){ rb2d.AddForce(Vector2.left);}
         if(Input.GetKey(playerRight)){rb2d.AddForce(Vector2.right);}
         
+    }
+
+    public void CheerTeam(string team)
+    {
+        //when you cheer for your team they move a little towards the ball 
+        if (Input.GetKey(cheerKey))
+        {
+            Debug.Log("cheer key has been pressed");
+            if (team == "Team1")
+            {
+                Services._AiTeam1.MoveTowardsBall();
+                Debug.Log("Team 1 is cheered towards the ball");
+            } else if (team == "Team2")
+            {
+                Services._AiTeam2.MoveTowardsBall();
+            }
+            else
+            {
+                Debug.LogError("In correct team submission");
+            }
+            
+        }
     }
 }

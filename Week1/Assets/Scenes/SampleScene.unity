@@ -426,9 +426,9 @@ GameObject:
   - component: {fileID: 727999023}
   - component: {fileID: 727999022}
   - component: {fileID: 727999021}
-  - component: {fileID: 727999019}
   - component: {fileID: 727999020}
   - component: {fileID: 727999024}
+  - component: {fileID: 727999019}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -450,8 +450,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUp: 119
   playerDown: 115
-  playerRight: 97
-  playerLeft: 100
+  playerRight: 100
+  playerLeft: 97
+  cheerKey: 32
+  team: Team1
 --- !u!50 &727999020
 Rigidbody2D:
   serializedVersion: 4
@@ -700,6 +702,8 @@ MonoBehaviour:
   playerDown: 274
   playerRight: 275
   playerLeft: 276
+  cheerKey: 304
+  team: Team2
 --- !u!23 &1579869308
 MeshRenderer:
   m_ObjectHideFlags: 0

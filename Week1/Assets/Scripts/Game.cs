@@ -17,12 +17,12 @@ public class Game : MonoBehaviour
         
         //everything for player1 
         Services._player1Team = GameObject.FindGameObjectsWithTag("player1");
-        Debug.Log(Services._player1Team.Length); 
-        
-        
+        Services._AiTeam1 = GameObject.Find("Player1-Team").GetComponent<AITeamMovement>(); 
+
+
         //everything for player2
         //Services._player2Team = GameObject.FindGameObjectsWithTag("player2");
-        
+
     }
     
     
