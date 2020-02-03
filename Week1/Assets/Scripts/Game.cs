@@ -14,10 +14,10 @@ public class Game : MonoBehaviour
     public void InitializeServices()
     {
         Services._game = this;
-        
-        //everything for player1 
+        Services._ball = GameObject.Find("Ball");
         Services._player1Team = GameObject.FindGameObjectsWithTag("player1");
-        Services._AiTeam1 = GameObject.Find("Player1-Team").GetComponent<AITeamMovement>(); 
+        
+        Services._AiTeam1 = new AITeamMovement(); 
 
 
         //everything for player2

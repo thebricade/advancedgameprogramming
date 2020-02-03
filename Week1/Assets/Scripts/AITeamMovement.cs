@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class AITeamMovement 
 {
-    private Rigidbody2D rdbd;
-    public GameObject ball;
+    
     public float speed = 1.0f; 
     
     public void MoveTowardsBall()
     {
        //find the ball's current location 
-       var ballLocation = ball.GetComponent<Transform>().position; 
+       Debug.Log(Services._ball);
+       var ballLocation = Services._ball.GetComponent<Transform>().position; 
        float step = speed * Time.deltaTime;
 
        for (int i = 0; i < Services._player1Team.Length; i++)

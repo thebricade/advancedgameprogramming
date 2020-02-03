@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Services 
 {
-    //references for specific game scripts 
 
+    public static Game _game; 
+    public static GameObject _ball; 
     public static AITeamMovement _AiTeam1, _AiTeam2; 
     public static GameObject[] _player1Team, _player2Team;
-    public static Game _game; 
+    
 
 }
