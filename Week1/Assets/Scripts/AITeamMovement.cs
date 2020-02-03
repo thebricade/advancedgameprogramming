@@ -17,13 +17,10 @@ public class AITeamMovement
 
        for (int i = 0; i < Services._player1Team.Length; i++)
        {
-           var TeamX = Services._player1Team[i].GetComponent<Transform>().position.x; // changed here for readability 
-           var TeamY = Services._player1Team[i].GetComponent<Transform>().position.y; // how can I do this without using getComponent at all??? 
-           
-           var currentposition = new Vector2(TeamX, TeamY);
+           var TeamLocation = Services._player1Team[i].GetComponent<Transform>().position; 
            
            Services._player1Team[i].GetComponent<Transform>().position =
-               Vector2.MoveTowards(currentposition, ballLocation, step); 
+               Vector2.MoveTowards(TeamLocation, ballLocation, step); 
        }
 
     }
