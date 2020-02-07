@@ -65,14 +65,18 @@ public abstract class AGPEvent
     }
 
     public delegate void Handler (AGPEvent e);
+    
+}
 
-    public class GoalScored : AGPEvent
+public class GoalScored : AGPEvent
+{
+    private bool Team1Goal;
+    private int score;
+
+    public GoalScored(bool team1, int current)
     {
-        public readonly bool Player1TeamScore;
-
-        public GoalScored(bool Player1TeamScore)
-        {
-            
-        }
+        this.Team1Goal = team1;
+        this.score = current; 
     }
+
 }
