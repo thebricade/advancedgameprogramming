@@ -70,13 +70,15 @@ public abstract class AGPEvent
 
 public class GoalScored : AGPEvent
 {
-    private bool Team1Goal;
-    private int score;
+    private int teamOneScore;
+    private int teamTwoScore;
+    private bool teamOneBool; // these are not named well'
 
-    public GoalScored(bool team1, int current)
+    public GoalScored(bool TeamOneBool, int TeamOneScore, int TeamTwoScore)
     {
-        this.Team1Goal = team1;
-        this.score = current; 
+        this.teamOneBool = TeamOneBool;
+        this.teamOneScore = TeamOneScore;
+        this.teamTwoScore = TeamTwoScore; 
     }
 
 }
