@@ -62,7 +62,7 @@ public abstract class AGPEvent
     public AGPEvent ()
     {
         creationTime = Time.time;
-    }
+    } 
 
     public delegate void Handler (AGPEvent e);
     
@@ -70,15 +70,14 @@ public abstract class AGPEvent
 
 public class GoalScored : AGPEvent
 {
-    private int teamOneScore;
-    private int teamTwoScore;
+    public int score;
     private bool teamOneBool; // these are not named well'
 
-    public GoalScored(bool TeamOneBool, int TeamOneScore, int TeamTwoScore)
+    public GoalScored(bool TeamOneBool, int Score)
     {
         this.teamOneBool = TeamOneBool;
-        this.teamOneScore = TeamOneScore;
-        this.teamTwoScore = TeamTwoScore; 
+        this.score = Score;
+
     }
 
 }

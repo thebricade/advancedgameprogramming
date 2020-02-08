@@ -17,6 +17,8 @@ public class Game : MonoBehaviour
         Services._ball = GameObject.Find("Ball");
         Services._player1Team = GameObject.FindGameObjectsWithTag("player1");
         
+        
+        
         Services._AiTeam1 = new AITeamMovement(); 
         Services._EventSystem = new EventSystem(); 
 
