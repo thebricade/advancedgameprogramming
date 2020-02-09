@@ -21,6 +21,7 @@ public class ScoreController : MonoBehaviour
     private void OnGoalScored(AGPEvent e)
     {
         var goalScoredEvent = (GoalScored)e; 
+        Debug.Log("goal Score!");
         
     }
 
