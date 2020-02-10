@@ -21,7 +21,7 @@ public class AITeamMovement
 
     private void CreateAIPlayer()
     {
-        
+        for (var i Services._player1Team)
     }
     
     
