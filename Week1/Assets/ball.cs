@@ -28,7 +28,7 @@ public class ball : MonoBehaviour
         if (col.gameObject.CompareTag("GoalPlayer2"))
         {
             Debug.Log("you hit player 2 goal");
-            Services._EventSystem.Fire(new GoalScored(true,1));
+            Services._EventSystem.Fire(new GoalScored(false,1));
         }
     }
     

@@ -6,7 +6,24 @@ using UnityEngine;
 public class AITeamMovement 
 {
     
-    public float speed = 1.0f; 
+    public float speed = 1.0f;
+    private List<GameObject> _teamPlayers;
+
+    #region LifeCycle
+
+    public void Initalize() //create all AI players
+    {
+        _teamPlayers = new List<GameObject>(); 
+        CreateAIPlayer();
+    }
+
+    #endregion
+
+    private void CreateAIPlayer()
+    {
+        
+    }
+    
     
     public void MoveTowardsBall()
     {

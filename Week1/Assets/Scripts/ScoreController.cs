@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreController : MonoBehaviour
 {
     private string player1Score, player2Score; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,8 @@ public class ScoreController : MonoBehaviour
 
     private void OnGoalScored(AGPEvent e)
     {
-        var goalScoredEvent = (GoalScored)e; 
+        var goalScoredEvent = (GoalScored)e;
+        //not sure how to get score here? do i just make a new variable
         Debug.Log("goal Score!");
         
     }
