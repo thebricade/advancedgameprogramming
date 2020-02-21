@@ -13,7 +13,7 @@ public class AITeamMovement
 
     public void Initalize() //create all AI players
     {
-        _teamPlayers = new List<GameObject>(); 
+//        _teamPlayers = Services._player1Team(); 
         CreateAIPlayer();
     }
 
@@ -21,7 +21,7 @@ public class AITeamMovement
 
     private void CreateAIPlayer()
     {
-        for (var i Services._player1Team)
+       
     }
     
     
